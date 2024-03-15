@@ -1,5 +1,5 @@
-'use client'
-import MenuIcon from '@mui/icons-material/Menu'
+"use client";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
 	AppBar,
 	Avatar,
@@ -12,101 +12,124 @@ import {
 	Toolbar,
 	Tooltip,
 	Typography,
-} from '@mui/material'
-import { grey } from '@mui/material/colors'
-import { useWeb3Modal } from '@web3modal/wagmi/react'
-import Link from 'next/link'
-import { useState } from 'react'
-import { useAccount, useDisconnect, useEnsAvatar, useEnsName } from 'wagmi'
+} from "@mui/material";
+import { grey } from "@mui/material/colors";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import Link from "next/link";
+import { useState } from "react";
+import { useAccount, useDisconnect, useEnsAvatar, useEnsName } from "wagmi";
 
-import formatAddress from '@/utils/formatAddress'
+import formatAddress from "@/utils/formatAddress";
 
-import ConnectWalletButton from './ConnectWalletButton'
+import ConnectWalletButton from "./ConnectWalletButton";
 
 const styles = {
-	appBar: { backgroundColor: grey[900] },
-	navigationMobileWrap: { display: { xs: 'flex', md: 'none' }, flexGrow: 1, alignItems: 'center', mr: 1 },
-	navigationMobileMenu: { display: { xs: 'block', md: 'none' } },
-	navigationDesktopWrap: { display: { xs: 'none', md: 'flex' }, flexGrow: 1, alignItems: 'center' },
+	appBar: { backgroundColor: grey[900], backgroundOpacity: 50 },
+	navigationMobileWrap: {
+		display: { xs: "flex", md: "none" },
+		flexGrow: 1,
+		alignItems: "center",
+		mr: 1,
+	},
+	navigationMobileMenu: { display: { xs: "block", md: "none" } },
+	navigationDesktopWrap: {
+		display: { xs: "none", md: "flex" },
+		flexGrow: 1,
+		alignItems: "center",
+	},
 	logoMobile: {
 		mx: 2,
-		display: { xs: 'flex', md: 'none' },
-		fontFamily: 'monospace',
+		display: { xs: "flex", md: "none" },
+		fontFamily: "monospace",
 		fontWeight: 700,
-		letterSpacing: '.3rem',
-		color: 'inherit',
-		textDecoration: 'none',
+		letterSpacing: ".3rem",
+		color: "inherit",
+		textDecoration: "none",
 	},
 	logoDesktop: {
 		mr: 2,
-		display: { xs: 'none', md: 'flex' },
-		fontFamily: 'monospace',
+		display: { xs: "none", md: "flex" },
+		fontFamily: "monospace",
 		fontWeight: 700,
-		letterSpacing: '.3rem',
-		color: 'inherit',
-		textDecoration: 'none',
+		letterSpacing: ".3rem",
+		color: "inherit",
+		textDecoration: "none",
 	},
-	navigationLink: { my: 2, color: 'white', display: 'block' },
+	navigationLink: { my: 2, color: "white", display: "block" },
 	userConnectedButton: { px: 2, py: 0.75 },
-	userAvatar: { ml: 1, width: '24px', height: '24px', flexGrow: 0, fontSize: '12px' },
+	userAvatar: {
+		ml: 1,
+		width: "24px",
+		height: "24px",
+		flexGrow: 0,
+		fontSize: "12px",
+	},
 	userMenuWrap: { flexGrow: 0 },
-	userMenu: { mt: '45px' },
-}
+	userMenu: { mt: "45px" },
+};
 
 const AppHeader = () => {
 	// App Title
-	const dappTitleText = 'WEB3DAPP'
+	const dappTitleText = "Synapsic";
 
 	// Navigation Pages
 	const pages = [
 		{
-			text: 'Dashboard',
-			href: '/dashboard',
+			text: "Dashboard",
+			href: "/dashboard",
 		},
-	]
-	const userMenuItems = ['Switch Network', 'Switch Wallet', 'Disconnect']
+		{
+			text: "Marketplace",
+			href: "/marketplace",
+		},
+		{
+			text: "Create",
+			href: "/create",
+		},
+	];
+	const userMenuItems = ["Switch Network", "Switch Wallet", "Disconnect"];
 
 	// State
-	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
-	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
+	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
 	// Hooks
-	const { address, isConnected } = useAccount()
-	const { disconnect } = useDisconnect()
-	const { data: ensName } = useEnsName({ address })
-	const { data: ensAvatar } = useEnsAvatar({ name: ensName })
-	const { open } = useWeb3Modal()
+	const { address, isConnected } = useAccount();
+	const { disconnect } = useDisconnect();
+	const { data: ensName } = useEnsName({ address });
+	const { data: ensAvatar } = useEnsAvatar({ name: ensName });
+	const { open } = useWeb3Modal();
 
 	// Handlers
 	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-		setAnchorElNav(event.currentTarget)
-	}
+		setAnchorElNav(event.currentTarget);
+	};
 	const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-		setAnchorElUser(event.currentTarget)
-	}
+		setAnchorElUser(event.currentTarget);
+	};
 
 	const handleCloseNavMenu = () => {
-		setAnchorElNav(null)
-	}
+		setAnchorElNav(null);
+	};
 
 	const handleCloseUserMenu = (setting: string) => {
-		if (setting === 'Switch Network') open({ view: 'Networks' })
-		if (setting === 'Switch Wallet') open()
-		if (setting === 'Disconnect') disconnect()
-		setAnchorElUser(null)
-	}
+		if (setting === "Switch Network") open({ view: "Networks" });
+		if (setting === "Switch Wallet") open();
+		if (setting === "Disconnect") disconnect();
+		setAnchorElUser(null);
+	};
 
 	// Components
-	const MenuNavigationItems = pages.map(page => (
+	const MenuNavigationItems = pages.map((page) => (
 		<Link key={page.text} href={page.href}>
 			<MenuItem onClick={handleCloseNavMenu}>
 				<Typography textAlign="center">{page.text}</Typography>
 			</MenuItem>
 		</Link>
-	))
+	));
 
 	return (
-		<AppBar position="static" elevation={0} sx={styles.appBar}>
+		<AppBar position="fixed" elevation={0} sx={styles.appBar}>
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					{/* Mobile Navigation */}
@@ -126,13 +149,13 @@ const AppHeader = () => {
 							id="menu-appbar"
 							anchorEl={anchorElNav}
 							anchorOrigin={{
-								vertical: 'bottom',
-								horizontal: 'left',
+								vertical: "bottom",
+								horizontal: "left",
 							}}
 							keepMounted
 							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'left',
+								vertical: "top",
+								horizontal: "left",
 							}}
 							open={Boolean(anchorElNav)}
 							onClose={handleCloseNavMenu}
@@ -161,9 +184,19 @@ const AppHeader = () => {
 						{isConnected ? (
 							<>
 								<Tooltip title="Open settings">
-									<Button variant="outlined" onClick={handleOpenUserMenu} sx={styles.userConnectedButton}>
-										<Typography variant="caption">{ensName || formatAddress(address)}</Typography>
-										<Avatar alt="User ENS Avatar" src={`${ensAvatar}`} sx={styles.userAvatar} />
+									<Button
+										variant="outlined"
+										onClick={handleOpenUserMenu}
+										sx={styles.userConnectedButton}
+									>
+										<Typography variant="caption">
+											{ensName || formatAddress(address)}
+										</Typography>
+										<Avatar
+											alt="User ENS Avatar"
+											src={`${ensAvatar}`}
+											sx={styles.userAvatar}
+										/>
 									</Button>
 								</Tooltip>
 								<Menu
@@ -171,19 +204,22 @@ const AppHeader = () => {
 									id="menu-appbar"
 									anchorEl={anchorElUser}
 									anchorOrigin={{
-										vertical: 'top',
-										horizontal: 'right',
+										vertical: "top",
+										horizontal: "right",
 									}}
 									keepMounted
 									transformOrigin={{
-										vertical: 'top',
-										horizontal: 'right',
+										vertical: "top",
+										horizontal: "right",
 									}}
 									open={Boolean(anchorElUser)}
 									onClose={handleCloseUserMenu}
 								>
-									{userMenuItems.map(item => (
-										<MenuItem key={item} onClick={() => handleCloseUserMenu(item)}>
+									{userMenuItems.map((item) => (
+										<MenuItem
+											key={item}
+											onClick={() => handleCloseUserMenu(item)}
+										>
 											<Typography textAlign="center">{item}</Typography>
 										</MenuItem>
 									))}
@@ -196,7 +232,7 @@ const AppHeader = () => {
 				</Toolbar>
 			</Container>
 		</AppBar>
-	)
-}
+	);
+};
 
-export default AppHeader
+export default AppHeader;
