@@ -24,7 +24,7 @@ import formatAddress from "@/utils/formatAddress";
 import ConnectWalletButton from "./ConnectWalletButton";
 
 const styles = {
-	appBar: { backgroundColor: grey[900], backgroundOpacity: 50 },
+	appBar: { backgroundColor: "rgba(33, 33, 33, 0.5)" },
 	navigationMobileWrap: {
 		display: { xs: "flex", md: "none" },
 		flexGrow: 1,
