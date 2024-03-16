@@ -1,7 +1,7 @@
 import React from "react";
 
-const SectionWrapper = () => {
-	return <div>SectionWrapper</div>;
+const SectionWrapper = ({ children }: any) => {
+	return <div>{children}</div>;
 };
 
 export default SectionWrapper;
