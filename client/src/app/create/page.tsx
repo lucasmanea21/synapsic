@@ -1,12 +1,15 @@
 import CreateScanCard from "@/components/Create/CreateScanCard";
+import PageWrapper from "@/components/Wrappers/PageWrapper";
 import React from "react";
 
 const CreatePage = () => {
-  return (
-    <div className="w-full max-w-6xl p-10 px-4 mx-auto mt-5 sm:px-8 ">
-      <CreateScanCard />
-    </div>
-  );
+	return (
+		<PageWrapper>
+			<div className="w-full max-w-6xl p-10 mt-[-50px] px-4 mx-auto sm:px-8 ">
+				<CreateScanCard />
+			</div>
+		</PageWrapper>
+	);
 };
 
 export default CreatePage;

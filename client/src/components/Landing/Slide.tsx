@@ -3,7 +3,7 @@ import NFTCard from "../NFT/NFTCard";
 
 // Import Swiper
 import Swiper, { Navigation } from "swiper";
-import "swiper/swiper.min.css";
+import "swiper/css";
 Swiper.use([Navigation]);
 
 const Slide = ({
@@ -18,7 +18,7 @@ const Slide = ({
 	const [swiperInitialized, setSwiperInitialized] = useState<boolean>(false);
 
 	useEffect(() => {
-		const carousel = new Swiper(`.${id}-carousel`, {
+		const carousel = new Swiper(`.stellar-carousel`, {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -39,8 +39,8 @@ const Slide = ({
 			initialSlide: 0,
 			spaceBetween: 24,
 			navigation: {
-				nextEl: `.${id}-carousel-next`,
-				prevEl: `.${id}-carousel-prev`,
+				nextEl: `.stellar-carousel-next`,
+				prevEl: `.stellar-carousel-prev`,
 			},
 		});
 		setSwiperInitialized(true);
@@ -58,21 +58,18 @@ const Slide = ({
 				{/* <SeeAll /> */}
 			</div>
 
-			<div className={`${id}-carousel swiper-container group`}>
+			<div className={`stellar-carousel swiper-container group`}>
 				<div className="swiper-wrapper w-fit">
-					{items.map(
-						(item: any, index: any) =>
-							item.category === id && (
-								<NFTCard item={item} index={index} key={index} />
-							),
-					)}
+					{items.map((item: any, index: any) => (
+						<NFTCard {...item} index={index} key={index} isSwiper />
+					))}
 				</div>
 			</div>
 
 			{/* Arrows */}
 			<div className="flex justify-end pt-8">
 				<button
-					className={`${id}-carousel-prev relative z-20 w-12 h-12 flex items-center justify-center group`}
+					className={`stellar-carousel-prev relative z-20 w-12 h-12 flex items-center justify-center group`}
 				>
 					<span className="sr-only">Previous</span>
 					<svg
@@ -84,7 +81,7 @@ const Slide = ({
 					</svg>
 				</button>
 				<button
-					className={`${id}-carousel-next relative z-20 w-12 h-12 flex items-center justify-center group`}
+					className={`stellar-carousel-next relative z-20 w-12 h-12 flex items-center justify-center group`}
 				>
 					<span className="sr-only">Next</span>
 					<svg

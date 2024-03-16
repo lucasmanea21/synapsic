@@ -40,11 +40,7 @@ const nftData = [
 ];
 
 const RecentlyListed = () => {
-	return (
-		<div>
-			<Slide items={nftData} id="Recently Listed" />
-		</div>
-	);
+	return <Slide items={nftData} id="Recently Listed" />;
 };
 
 export default RecentlyListed;

@@ -9,14 +9,18 @@ type NFTCardProps = {
 	price: string;
 	type: string;
 	id: string;
+	isSwiper?: boolean;
 };
 
-const NFTCard = ({ title, image, price, type, id }: NFTCardProps) => {
+const NFTCard = ({ title, image, price, type, id, isSwiper }: NFTCardProps) => {
 	return (
 		<Card
 			shadow="sm"
 			key={id}
 			isPressable
+			className={`${
+				isSwiper && "swiper-slide"
+			}  h-auto bg-gradient-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800 hover:border-slate-700/60 transition-colors group relative`}
 			onPress={() => console.log("item pressed")}
 		>
 			<CardBody className="p-0 overflow-visible ">
