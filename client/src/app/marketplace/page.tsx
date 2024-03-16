@@ -1,6 +1,7 @@
 import React from "react";
 import NFTCard from "@/components/NFT/NFTCard";
 
+// Mock data for NFTs - you might fetch this data from an API or your backend
 const nftData = [
 	{
 		title: "NFT Title 1",
