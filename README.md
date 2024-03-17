@@ -6,7 +6,7 @@ Our mission is to make healthcare more open and decentralized, allowing people t
 
 ## How it works
 
-We use our open-source EEG Scanner in order to obtain brainwave data from our testers in a .csv form, which we later convert and encrypt and put it on the blockchain, under a "Synapsic brainscan" NFT.
+We use our open-source EEG Scanner in order to obtain brainwave data from our testers in a .csv form, which we later convert and encrypt and put it on the blockchain, under a "Synapsic Brainscan" NFT.
 
 The testers then have full control over their data, which they can later use on our data marketplace.
 
