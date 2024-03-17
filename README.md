@@ -18,16 +18,11 @@ The platform could be extended to accept any type of neural data, like MRI, fMRI
 
 ## Folder structure
 
-- [`brain`](/brain)
-  - EEG data gathering and processing, including the Python script for data encryption and details about the OpenBCI EEG headband interface.
-- [`client`](/client)
-  - Next.js application code for Synapsic, managing user interactions, data submission, and WorldID verification to ensure data authenticity.
-- [`contracts`](/contracts)
-  - Smart contracts for Synapsic's blockchain functionality. It includes the brainscan NFT contract, which handles brainwave scan data operations, and the marketplace contract for medical data NFT transactions.
-- [`galadriel`](/galadriel)
-  - Dedicated to our AI models (work in progress), Galadriel is set to verify and validate neural data batches before they are made available on the data marketplace.
-- [`storage`](/storage)
-  - Storage module for Synapsic, intended to use Filecoin to store neural data in a decentralized way.
+- [`brain`](/brain): EEG data gathering and processing, including the Python script for data encryption and details about the OpenBCI EEG headband interface.
+- [`client`](/client): Next.js application code for Synapsic, managing user interactions, data submission, and WorldID verification to ensure data authenticity.
+- [`contracts`](/contracts): Smart contracts for Synapsic's blockchain functionality. It includes the brainscan NFT contract, which handles brainwave scan data operations, and the marketplace contract for medical data NFT transactions.
+- [`galadriel`](/galadriel): Dedicated to our AI models (work in progress), Galadriel is set to verify and validate neural data batches before they are made available on the data marketplace.
+- [`storage`](/storage): Storage module for Synapsic, intended to use Filecoin to store neural data in a decentralized way.
 
 ## Smart Contracts
 
