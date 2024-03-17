@@ -19,7 +19,7 @@ const CreateScanCard = () => {
 	};
 
 	return (
-		<CardWrapper className="max-w-3xl">
+		<CardWrapper className="max-w-2xl">
 			<Header />
 			<Divider />
 			{selection === "data" ? (

@@ -34,9 +34,8 @@ const DefaultPage = () => {
 						</h1>
 						<div className="max-w-3xl mx-auto">
 							<p className="text-lg text-slate-400">
-								Synapsis is a cross-chain neural data marketplace & hub. Trade
-								and invest in real estate, stocks, commodities and more, all on
-								the blockchain.
+								Synapsis is a cross-chain neural data marketplace & hub, aiming
+								to make healthcare more open and decentralized.
 							</p>
 						</div>
 

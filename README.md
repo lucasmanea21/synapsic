@@ -34,10 +34,10 @@ For the hackathon, we have developed and deployed two contracts, as a proof of c
 
 Deployed addresses:
 
-- Arbitrum:
-- Base:
+- Arbitrum: ``
+- Base: `0x38dbc6D9E2B068f721D91BD920F7e03D995F3A78`
 
-For more details, check out the destined `contracts` directory. Deployed addresses are listed below.
+For more details, check out the destined `contracts` directory.
 
 ## Hardware
 

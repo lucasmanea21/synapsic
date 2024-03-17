@@ -6,14 +6,14 @@ import CardWrapper from "@/components/Wrappers/CardWrapper";
 
 const nftData = [
 	{
-		title: "NFT Title 1",
+		title: "EEG Scan",
 		price: "0.1",
-		type: "eeg",
+		type: "EEG",
 		image: "https://via.placeholder.com/500x200",
 		id: "1",
 	},
 	{
-		title: "NFT Title 2",
+		title: "Biomedical study - 30 people",
 		price: "0.2",
 		type: "art",
 		image: "https://via.placeholder.com/500x200",
@@ -39,6 +39,27 @@ const nftData = [
 		type: "art",
 		image: "https://via.placeholder.com/500x200",
 		id: "5",
+	},
+	{
+		title: "Stanford Neuroimaging Study",
+		price: "0.2",
+		type: "art",
+		image: "https://via.placeholder.com/500x200",
+		id: "6",
+	},
+	{
+		title: "Biomedical study - 30 people",
+		price: "0.2",
+		type: "art",
+		image: "https://via.placeholder.com/500x200",
+		id: "7",
+	},
+	{
+		title: "Biomedical study - 30 people",
+		price: "0.2",
+		type: "art",
+		image: "https://via.placeholder.com/500x200",
+		id: "8",
 	},
 ];
 

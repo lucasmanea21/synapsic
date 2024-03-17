@@ -1,5 +1,6 @@
 import React from "react";
 import Slide from "./Slide";
+import BrainScan from "../../../public/images/brainscans.jpg";
 
 const nftData = [
 	{

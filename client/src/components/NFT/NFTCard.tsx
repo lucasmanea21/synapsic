@@ -2,6 +2,7 @@
 import { Card, CardBody, CardFooter } from "@nextui-org/react";
 import Image from "next/image";
 import React from "react";
+import BrainScan from "../../../public/images/brainscans.jpg";
 
 type NFTCardProps = {
 	title: string;
@@ -31,7 +32,7 @@ const NFTCard = ({ title, image, price, type, id, isSwiper }: NFTCardProps) => {
 					height={140}
 					alt={title}
 					className="w-full object-cover h-[140px]"
-					src={image}
+					src={BrainScan}
 				/>
 			</CardBody>
 			<CardFooter className="flex flex-col items-start justify-between text-white bg-opacity-20 bg- text-small bg-zinc-800">

@@ -28,7 +28,7 @@ const CreateFromData = () => {
 			<input
 				{...register("name", { required: true })}
 				placeholder="Name"
-				className="w-full max-w-xs input input-bordered"
+				className="w-full max-w-xs p-2 bg-opacity-50 rounded-md input input-bordered bg-zinc-700"
 			/>
 			{errors.name && (
 				<span className="text-red-500">This field is required</span>
@@ -37,7 +37,7 @@ const CreateFromData = () => {
 			<textarea
 				{...register("description", { required: true })}
 				placeholder="Description of your data"
-				className="w-full max-w-xs textarea textarea-bordered"
+				className="w-full max-w-xs p-2 rounded-md textarea textarea-bordered bg-zinc-700"
 			/>
 			{errors.description && (
 				<span className="text-red-500">This field is required</span>

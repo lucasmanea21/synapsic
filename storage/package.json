@@ -1,0 +1,15 @@
+{
+  "name": "storage",
+  "version": "1.0.0",
+  "description": "Storage module for Synapsic, using Filecoin to store neural data in a decentralized way.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glif/filecoin-rpc-client": "^3.0.2"
+  }
+}
