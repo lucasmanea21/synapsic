@@ -13,10 +13,19 @@ type NFTCardProps = {
 	price: string;
 	type: string;
 	id: string;
+	desc: string;
 	isSwiper?: boolean;
 };
 
-const NFTCard = ({ title, image, price, type, id, isSwiper }: NFTCardProps) => {
+const NFTCard = ({
+	title,
+	image,
+	price,
+	type,
+	id,
+	isSwiper,
+	desc,
+}: NFTCardProps) => {
 	const { nft, executeContractRead, executeContractWrite } = useContract();
 	const { isConnected } = useAccount();
 	const router = useRouter();
@@ -69,7 +78,7 @@ const NFTCard = ({ title, image, price, type, id, isSwiper }: NFTCardProps) => {
 				</div>
 				<div>
 					<p className="my-3 text-xs text-left text-gray-200 align-left">
-						Biomedical study taken on more than 50 patiens under 30 years old.
+						{desc}
 					</p>
 				</div>
 				<div className="flex gap-2 mt-6">

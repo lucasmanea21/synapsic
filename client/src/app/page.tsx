@@ -28,7 +28,7 @@ const DefaultPage = () => {
 						{/* <div className="inline-flex pb-3 font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-200">
 						Integrations & Add-ons
 					</div> */}
-						<h1 className="pb-4 font-bold text-transparent h1 bg-clip-text bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">
+						<h1 className="pb-4 mt-4 font-bold text-transparent h1 bg-clip-text bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">
 							Your brain data,
 							<br /> fully onchain.
 						</h1>
@@ -40,8 +40,8 @@ const DefaultPage = () => {
 						</div>
 
 						<div className="flex items-center justify-center gap-3 mt-10">
-							<Button>Learn more</Button>
-							<Button>Get Started</Button>
+							<Button className="bg-gray-700">Learn more</Button>
+							<Button className="bg-blue-500">Get Started</Button>
 						</div>
 					</div>
 					<RecentlyListed />
