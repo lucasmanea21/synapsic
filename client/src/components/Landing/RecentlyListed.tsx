@@ -1,6 +1,6 @@
 import React from "react";
 import Slide from "./Slide";
-import BrainScan from "../../../public/images/brainscans.jpg";
+import BrainScan from "../../../public/images/brainscans.png";
 import { nftData } from "@/app/marketplace/page";
 
 const RecentlyListed = () => {

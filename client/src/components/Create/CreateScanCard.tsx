@@ -79,8 +79,8 @@ const CreateScanCard = () => {
 						<div className="flex">
 							<FaDatabase className="text-7xl" />
 						</div>
-						<p className="text-2xl">Create from dataset</p>
-						<p className="text-sm text-gray-200">
+						<p className="text-3xl">Create from dataset</p>
+						<p className="text-gray-200 text-md">
 							Use existing neural datasets and upload them to the blockchain.
 							Verified by our AI, secured by Noir.
 						</p>
@@ -93,8 +93,8 @@ const CreateScanCard = () => {
 						<div className="flex ">
 							<FaBrain className="text-7xl" />
 						</div>
-						<p className="text-2xl">Scan your brain</p>
-						<p className="text-sm text-gray-200">
+						<p className="text-3xl">Scan your brain</p>
+						<p className="text-gray-200 text-md">
 							Take a live EEG using our brain device and get a cool brain scan
 							collectible.
 						</p>
