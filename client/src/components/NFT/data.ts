@@ -24,7 +24,7 @@ export const nftData = [
 		id: "3",
 	},
 	{
-		title: "NFT Title 4",
+		title: "Neural Dataset",
 		desc: "Biomedical study taken on more than 50 patiens under 30 years old.",
 		price: "0.2",
 		type: "art",

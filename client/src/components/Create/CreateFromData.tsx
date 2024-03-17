@@ -9,7 +9,7 @@ import { useAccount } from "wagmi";
 
 const sendDataToBackend = async (data: any) => {
 	console.log("Sending data to backend:", data);
-	// Simulate API call
+
 	return new Promise((resolve) => setTimeout(resolve, 1000));
 };
 
@@ -83,10 +83,11 @@ const CreateFromData = () => {
 					signal="user_value" // any arbitrary value the user is committing to, e.g. a vote
 					onSuccess={onSuccess}
 					verification_level="device" // minimum verification level accepted, defaults to "orb"
+					className="z-100"
 				>
 					{({ open }) => (
 						<button
-							className="flex w-auto p-2 font-medium text-black bg-gray-100 rounded-md text-md "
+							className="flex w-[180px] p-2 font-medium text-black bg-gray-100 rounded-md text-md "
 							onClick={open}
 						>
 							Verify with World ID

@@ -12,7 +12,7 @@ The testers then have full control over their data, which they can later use on 
 
 Through the data marketplace, researchers, AI developers or anyone interested in large sets of neural data can buy, sell and share useful batches, secured by ZK proofs through Noir and verified by our AI models through Galadriel (WIP).
 
-We also use WorldID verification in our frontend app in order to ensure only real people are submitting their data to the marketplace, increasing security & confidence.
+We also use WorldID verification in our Next.js frontend app in order to ensure only real people are submitting their data to the marketplace, increasing security & confidence.
 
 The platform could be extended to accept any type of neural data, like MRI, fMRI, CT, which would further improve their usefulness, but also any kind of medical data.
 
@@ -34,7 +34,7 @@ For the hackathon, we have developed and deployed two contracts, as a proof of c
 
 Deployed addresses:
 
-- Arbitrum: ``
+- Arbitrum: `0x2DC3A8a31902e707b10443216142872E2Dddf407`
 - Base: `0x38dbc6D9E2B068f721D91BD920F7e03D995F3A78`
 - Galadriel: `0xe5bC889C0C3677f871f35361F68cd735fd86427f`
 

@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.20",
+    version: "0.8.23",
   },
   networks: {
     // for mainnet
@@ -25,6 +25,11 @@ const config: HardhatUserConfig = {
       url: "http://localhost:8545",
       accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
+    },
+    arbitrumSepolia: {
+      url: "https://sepolia-rollup.arbitrum.io/rpc",
+      chainId: 421614,
+      accounts: [process.env.WALLET_KEY as string],
     },
   },
   defaultNetwork: "hardhat",
