@@ -5,7 +5,7 @@ import React from "react";
 const CreatePage = () => {
 	return (
 		<PageWrapper>
-			<div className="w-full max-w-6xl p-10 mt-[-50px] px-4 mx-auto sm:px-8 ">
+			<div className=" p-10 mt-[-50px] px-4 mx-auto sm:px-8 ">
 				<CreateScanCard />
 			</div>
 		</PageWrapper>

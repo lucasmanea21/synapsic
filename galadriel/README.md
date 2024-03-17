@@ -4,6 +4,8 @@ AI module for Synapsic, making use of Galadriel in order to integrate & deploy o
 
 The Galadriel Marketplace smart contract is an improvement of the regular Marketplace contract, featuring data AI verification using an oracle, so that the platform is secure to malicious actors and fake data.
 
+Deployment address: `0xe5bC889C0C3677f871f35361F68cd735fd86427f`
+
 ## Features and endpoints
 
 ### setListingPrice

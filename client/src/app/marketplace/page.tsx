@@ -4,7 +4,7 @@ import NFTCard from "@/components/NFT/NFTCard";
 import PageWrapper from "@/components/Wrappers/PageWrapper";
 import CardWrapper from "@/components/Wrappers/CardWrapper";
 
-const nftData = [
+export const nftData = [
 	{
 		title: "EEG Scan",
 		price: "0.1",
@@ -21,7 +21,7 @@ const nftData = [
 	},
 	{
 		title: "NFT Title 3",
-		price: "0.2",
+		price: "Free",
 		type: "art",
 		image: "https://via.placeholder.com/500x200",
 		id: "3",

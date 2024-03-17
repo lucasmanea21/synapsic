@@ -1,5 +1,4 @@
-import {ethers} from "hardhat";
-
+import { ethers } from "hardhat";
 
 async function main() {
   if (!process.env.ORACLE_ADDRESS) {
@@ -9,15 +8,16 @@ async function main() {
   await deployQuickstart(oracleAddress);
 }
 
-
 async function deployQuickstart(oracleAddress: string) {
-  const agent = await ethers.deployContract("Quickstart", [oracleAddress], {});
+  const agent = await ethers.deployContract(
+    "SynapsicMarketplace",
+    [oracleAddress],
+    {}
+  );
 
   await agent.waitForDeployment();
 
-  console.log(
-    `Quickstart contract deployed to ${agent.target}`
-  );
+  console.log(`Quickstart contract deployed to ${agent.target}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

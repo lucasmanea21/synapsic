@@ -22,9 +22,9 @@ const DefaultPage = () => {
 	return (
 		<PageWrapper>
 			<div className="max-w-5xl px-4 mx-auto sm:px-5">
-				<div className="pt-16 md:pt-20">
+				<div className="pt-3 md:pt-5">
 					{/* Section header */}
-					<div className="pb-12 text-center md:pb-20">
+					<div className="pb-5 text-center md:pb-8">
 						{/* <div className="inline-flex pb-3 font-medium text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-200">
 						Integrations & Add-ons
 					</div> */}

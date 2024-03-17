@@ -1,6 +1,6 @@
-import { Button, Typography } from '@mui/material'
-import { useWeb3Modal } from '@web3modal/wagmi/react'
-import { useConnect } from 'wagmi'
+import { Button, Typography } from "@mui/material";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useConnect } from "wagmi";
 
 const styles = {
 	button: {
@@ -9,11 +9,11 @@ const styles = {
 	walletText: {
 		pl: 1,
 	},
-}
+};
 
 const ConnectWalletButton = (): JSX.Element => {
-	const { error } = useConnect()
-	const { open } = useWeb3Modal()
+	const { error } = useConnect();
+	const { open } = useWeb3Modal();
 
 	return (
 		<>
@@ -26,6 +26,7 @@ const ConnectWalletButton = (): JSX.Element => {
 				id="connect-wallet-button"
 				variant="contained"
 				color="primary"
+				className="bg-blue-500"
 				size="small"
 				sx={styles.button}
 				onClick={() => open()}
@@ -33,7 +34,7 @@ const ConnectWalletButton = (): JSX.Element => {
 				Connect Wallet
 			</Button>
 		</>
-	)
-}
+	);
+};
 
-export default ConnectWalletButton
+export default ConnectWalletButton;

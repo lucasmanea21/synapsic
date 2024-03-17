@@ -36,6 +36,7 @@ Deployed addresses:
 
 - Arbitrum: ``
 - Base: `0x38dbc6D9E2B068f721D91BD920F7e03D995F3A78`
+- Galadriel: `0xe5bC889C0C3677f871f35361F68cd735fd86427f`
 
 For more details, check out the destined `contracts` directory.
 
