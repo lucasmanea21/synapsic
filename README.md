@@ -10,7 +10,7 @@ We use our open-source EEG Scanner in order to obtain brainwave data from our te
 
 The testers then have full control over their data, which they can later use on our data marketplace.
 
-Through the data marketplace, researchers, AI developers or anyone interested in large sets of neural data can buy, sell and share useful batches, secured by ZK proofs through Noir and verified by our AI models through Galadriel (WIP).
+Through the data marketplace, researchers, AI developers or anyone interested in large sets of neural data can buy, sell and share useful batches, verified by our AI models through Galadriel (WIP).
 
 We also use WorldID verification in our Next.js frontend app in order to ensure only real people are submitting their data to the marketplace, increasing security & confidence.
 
